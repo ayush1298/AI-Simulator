@@ -10,3 +10,5 @@ st-copy
 pipreqs
 pydub
 SpeechRecognition
+cerebras_cloud_sdk
+groq

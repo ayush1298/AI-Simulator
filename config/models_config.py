@@ -159,6 +159,48 @@ MODEL_PROVIDERS = {
             }
         }
     },
+    "Cerebras": {
+        "api_key_env": "CEREBRAS_API_KEY",
+        "base_url": "https://api.cerebras.ai/v1",
+        "models": {
+            "gpt-oss-120b": {
+                "name": "GPT OSS 120B",
+                "description": "Cerebras's largest open-source model with 120B parameters.",
+                "max_tokens": 8192,
+                "cost": "Medium"
+            },
+            "llama-4-maverick": {
+                "name": "Llama 4 Maverick",
+                "description": "Advanced Llama 4 variant optimized for complex reasoning.",
+                "max_tokens": 8192,
+                "cost": "High"
+            },
+            "llama-4-scout": {
+                "name": "Llama 4 Scout",
+                "description": "Fast and efficient Llama 4 variant for general tasks.",
+                "max_tokens": 8192,
+                "cost": "Medium"
+            }
+        }
+    },
+    "Grok": {
+        "api_key_env": "GROK_API_KEY",
+        "base_url": "https://api.grok.com/v1",
+        "models": {
+            "deepseek-r1-distill-llama-70b": {
+                "name": "DeepSeek R1 Distill Llama 70B",
+                "description": "Distilled version of DeepSeek R1 based on Llama 70B architecture.",
+                "max_tokens": 8192,
+                "cost": "High"
+            },
+            "moonshotai/kimi-k2-instruct": {
+                "name": "Kimi K2 Instruct",
+                "description": "MoonshotAI's instruction-tuned model for conversational AI.",
+                "max_tokens": 8192,
+                "cost": "Medium"
+            }
+        }
+    },
     "OpenRouter": {
         "api_key_env": "OPENROUTER_API_KEY",
         "base_url": "https://openrouter.ai/api/v1",
@@ -210,6 +252,30 @@ MODEL_PROVIDERS = {
                 "description": "Meta's vision-capable model",
                 "max_tokens": 4096,
                 "cost": "Medium"
+            },
+            "meta-llama/llama-3.2-90b-vision-instruct": {
+                "name": "Llama 3.2 90B Vision",
+                "description": "Meta's vision-capable model",
+                "max_tokens": 4096,
+                "cost": "Medium"
+            },
+            "qwen/qwen3-coder": {
+                "name": "Qwen 3 Coder",
+                "description": "Alibaba's latest coding-specialized model with advanced reasoning.",
+                "max_tokens": 8192,
+                "cost": "Medium"
+            },
+            "qwen/qwen3-235b-a22b-thinking-2507": {
+                "name": "Qwen 3 235B Thinking",
+                "description": "Qwen's largest thinking model with 235B parameters for complex reasoning.",
+                "max_tokens": 8192,
+                "cost": "Very High"
+            },
+            "qwen/qwen3-235b-a22b-2507": {
+                "name": "Qwen 3 235B",
+                "description": "Qwen's flagship 235B parameter model for general tasks.",
+                "max_tokens": 8192,
+                "cost": "Very High"
             }
         }
     }

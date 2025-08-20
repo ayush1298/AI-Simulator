@@ -8,7 +8,7 @@ import datetime
 
 
 def main():
-    st.set_page_config(page_title="AI Simulator & Code Playground", layout="wide")
+    st.set_page_config(page_title="AI Simulator", layout="wide")
     
     # Display the main UI and get user inputs (updated signature to match your new model system)
     query, provider, model_config, framework_choice, start_action, run_in_playground, uploaded_file, uploaded_audio = display_ui()

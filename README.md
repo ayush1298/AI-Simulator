@@ -1,4 +1,4 @@
-# 🤖 AI Simulator & Python Playground
+# 🤖 AI Simulator
 
 A powerful AI-driven platform for creating, learning, and experimenting with physics simulations using PyGame and Ursina. Generate interactive simulations with just natural language descriptions and explore the physics behind them!
 
