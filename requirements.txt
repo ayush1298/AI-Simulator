@@ -1,0 +1,12 @@
+streamlit
+openai
+langchain-deepseek
+agno
+ursina
+pygame
+streamlit-ace
+streamlit-extras
+st-copy
+pipreqs
+pydub
+SpeechRecognition
