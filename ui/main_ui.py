@@ -1,7 +1,6 @@
 import streamlit as st
 from streamlit_ace import st_ace
 from st_copy import copy_button
-from config.api_config import OPENROUTER_API_KEY, GEMINI_API_KEY
 from utils.transcription import transcribe_audio
 from ui.examples_library import display_examples_section, add_to_examples_gallery
 from ui.model_selector import display_model_selector_compact

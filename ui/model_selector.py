@@ -130,6 +130,8 @@ class ModelSelector:
                 "Google": "https://makersuite.google.com/app/apikey",
                 "DeepSeek": "https://platform.deepseek.com/api_keys",
                 "Mistral": "https://console.mistral.ai/api-keys/",
+                "Cerebras": "https://cloud.cerebras.ai/api-keys",
+                "Grok": "https://console.grok.com/api-keys", 
                 "OpenRouter": "https://openrouter.ai/keys"
             }
             
