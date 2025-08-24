@@ -22,20 +22,25 @@ class CodeGenAgent(BaseAgent):
             user_content += f"\nThe user also provided a file: {file.name}"
         if audio:
             user_content += f"\nThe user also provided an audio file: {audio.name}"
-
-        response = client.chat.completions.create(
-            model=self.model_config["model"],
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_content}
+        try:
+            response = client.chat.completions.create(
+                model=self.model_config["model"],
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_content}
             ],
             max_tokens=8192
         )
 
-        code = response.choices[0].message.content
-        if "```python" in code:
-            code = code.split("```python")[1].split("```")[0]
-        return code.strip()
+            code = response.choices[0].message.content
+            if code is None:
+                return "# Error: No code generated from AI response"
+            
+            if "```python" in code:
+                code = code.split("```python")[1].split("```")[0]
+            return code.strip()
+        except Exception as e:
+            return f"# Error: {str(e)}"
 
     def run(self, plan: str, error_feedback: str = None, file: str = None, audio: str = None):
         return self.generate_code(plan, error_feedback, file, audio)
